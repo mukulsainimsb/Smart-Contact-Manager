@@ -1,0 +1,50 @@
+ <!doctype html>
+ <html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+ <head>
+ <title>My Page</title>
+ </head>
+ <body>
+ <section>
+ <div class="card mr-3 ml-3">
+  <div class="card-body">
+<h1 class="text-center"> Your Contacts </h1>
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Action</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="c : ${contacts}">
+      <th scope="row"  th:text="${c.cId}"></th>
+      <td>
+      <img src="" class="my_profile_picture" th:src="@{'/img/'+${c.image}}" alt="profile photo"/>
+      <span th:text="${c.name}"></span>
+      </td>
+      <td>
+      <a href="" th:href="@{'/user/contact/'+${c.cId}}">
+    <span th:text="${c.email}">
+      </span>
+      </a>
+      </td>
+      <td th:text="${c.phone}"></td>
+      <td>
+      <a th:href="@{'/user/delete/'+${c.cId}}" class="btn btn-danger btn-sm">Delete</a></td>
+      <td>
+      <form method="post" th:action="@{'/user/update-contact/'+${c.cId}}">
+      <button type="submit" class="btn btn-success btn-sm">Update</button>
+      </form>
+      </td>
+    </tr>
+  </tbody>
+</table>
+ </div>
+ </div>
+ </section>
+ </body>
+ </html>

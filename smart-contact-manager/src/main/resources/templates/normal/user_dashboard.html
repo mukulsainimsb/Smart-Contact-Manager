@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+    <title th:text="${title}"></title>
+</head>
+<body>
+    <section>
+        <div style="text-align: center; font-family: Arial, sans-serif; padding: 20px; background-color: #f4f4f4; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); max-width: 600px; margin: auto;">
+            <h1 style="color: #2c3e50;">Welcome! You Are a Normal User</h1>
+            <h2 style="color: #2c3e50;">This is Your Private Dashboard</h2>
+            <h3 style="color: #333;">User Name: <span th:text="${user.name}"></span></h3>
+            <h3 style="color: #333;">User Email: <span th:text="${user.email}"></span></h3>
+            <h3><a href="" th:href="@{/logout}" style="color: #3498db; text-decoration: none;">LogOut</a></h3>
+        </div>
+    </section>
+</body>
+</html>

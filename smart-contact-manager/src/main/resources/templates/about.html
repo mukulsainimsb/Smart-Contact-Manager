@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+    <title>About Smart Contact Manager</title>
+    <style>
+        body.about-page {
+            background-color: #f0f8ff !important;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            max-width: 800px; 
+            margin: auto;
+        }
+        h1 {
+            color: #2980b9; 
+            font-size: 36px; 
+            text-align: center; 
+        }
+        h2 {
+            color: #e74c3c; 
+            font-size: 28px; 
+            margin-top: 30px;
+            text-align: center; 
+        }
+        p {
+            line-height: 1.6;
+            text-align: justify; 
+        }
+        .feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            background-color: #ecf0f1; 
+            border-radius: 5px;
+            padding: 15px;
+        }
+        .feature img {
+            width: 60px;
+            height: 60px;
+            margin-right: 20px;
+        }
+        .feature h3 {
+            color: #2980b9; 
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        .feature p {
+            margin: 0;
+        }
+        a {
+            display: inline-block;
+            text-align: center;
+            background-color: #3498db; 
+            color: white; 
+            padding: 10px 20px; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            margin-top: 30px; 
+        }
+        a:hover {
+            background-color: #2980b9; 
+        }
+    </style>
+</head>
+<body class="about-page">
+    <section>
+        <div class="container">
+            <h1>Welcome to Smart Contact Manager</h1>
+            
+            <p>Smart Contact Manager is a powerful and user-friendly application designed to help you manage your contacts efficiently. With its intuitive interface and robust features, you can easily store, organize, and access your contact information.</p>
+
+            <h2>Key Features</h2>
+            
+            <div class="feature">
+                <div>
+                    <h3>Contact Management</h3>
+                    <p>Easily add, edit, and delete contacts with detailed information such as name, email, phone number, and address.</p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <div>
+                    <h3>Search and Filter</h3>
+                    <p>Quickly find contacts using the powerful search functionality or filter contacts based on specific criteria.</p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <div>
+                    <h3>Contact Groups</h3>
+                    <p>Organize your contacts into groups for better management and easy access to specific sets of contacts.</p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <div>
+                    <h3>User-friendly Interface</h3>
+                    <p>Enjoy a clean and intuitive interface that makes navigating and using the application a breeze.</p>
+                </div>
+            </div>
+
+            <h2>Get Started</h2>
+            
+            <p>To start using Smart Contact Manager, simply sign up and create your account. Once logged in, you can begin adding your contacts and taking advantage of all the features the application offers.</p>
+
+             <!-- Call to action button -->
+             <a href="#" th:href="@{/signup}">Get Started Now!</a>
+
+             <!-- Optional footer -->
+             <footer style="text-align:center;margin-top:40px;">
+                 <p>&copy; 2024 Smart Contact Manager. All rights reserved.</p>
+             </footer>
+        </div>
+    </section>
+</body>
+</html>
